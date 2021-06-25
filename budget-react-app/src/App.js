@@ -71,7 +71,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <div>
+      <div className="app-div">
         <Switch>
           <Route exact path="/">
             <Home />

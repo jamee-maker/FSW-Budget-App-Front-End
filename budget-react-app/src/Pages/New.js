@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./New.css";
 
 export default function New(props) {
   const [transaction, setTransaction] = useState({
@@ -34,9 +35,9 @@ export default function New(props) {
   };
 
   return (
-    <div>
+    <div className="new-page">
       <h2>Add a new item</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="new-form" onSubmit={handleSubmit}>
         <label htmlFor="Date">Date</label>
         <input
           type="text"

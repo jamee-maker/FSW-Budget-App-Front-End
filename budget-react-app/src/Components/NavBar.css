@@ -1,0 +1,12 @@
+.navbar {
+  background-color: mediumaquamarine;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

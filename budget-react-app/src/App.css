@@ -1,0 +1,12 @@
+#heading-link {
+  text-decoration: none;
+}
+
+.app-div {
+  display: flex;
+  justify-content: center;
+}
+
+#redText {
+  color: red;
+}

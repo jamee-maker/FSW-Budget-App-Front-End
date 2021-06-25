@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import { apiUrl } from "../util/apiUrl";
+import "./Edit.css";
 
 const API = apiUrl();
 
@@ -50,9 +51,9 @@ export default function Edit(props) {
   }, [index, history]);
 
   return (
-    <div>
+    <div className="edit-page">
       <h2>Add a new item</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="edit-form" onSubmit={handleSubmit}>
         <label htmlFor="Date">Date</label>
         <input
           type="text"

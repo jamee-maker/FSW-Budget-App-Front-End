@@ -1,14 +1,18 @@
 import React from "react";
+import "./Index.css";
+import { Link } from "react-router-dom";
 
 export default function Index(props) {
   const { transactions } = props;
-  const transactionsList = transactions.map((elem) => {
+  const transactionsList = transactions.map((elem, i) => {
     return (
       <>
-        <li>
+        <li className="index-list-item">
           <span>{elem.date}</span>
-          <span>{elem.name}</span>
-          <span>{elem.amount}</span>
+          <Link id="heading-link" to={`/transactions/${i}`}>
+            <span>{elem.name}</span>
+          </Link>
+          <span id={elem.amount < 0 ? "redText" : ""}>{elem.amount}</span>
         </li>
         <hr />
       </>
@@ -19,9 +23,9 @@ export default function Index(props) {
     return (sum += elem.amount);
   });
   return (
-    <div>
+    <div className="index">
       <h2>Bank Account Total: {sum}</h2>
-      <ul>{transactionsList}</ul>
+      <ul className="index-list">{transactionsList}</ul>
     </div>
   );
 }
